@@ -1,0 +1,26 @@
+﻿<styles:TkWindow x:Class="RrfParser.WPF.ReplaySimulation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
+        xmlns:styles="clr-namespace:TokeiLibrary.WPF.Styles;assembly=TokeiLibrary"
+        Title="Replay Simulation" Height="400" Width="700" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <Label Content="Account ID:" />
+            <TextBox Name="_tbAid" Width="100" VerticalContentAlignment="Center" Margin="3" />
+            <Label Content="Tick from:" />
+            <TextBox Name="_tbTickFrom" Width="100" VerticalContentAlignment="Center" Margin="3" />
+            <Label Content="Tick to:" />
+            <TextBox Name="_tbTickTo" Width="100" VerticalContentAlignment="Center" Margin="3" />
+            <Button Name="_buttonToScript" Click="_buttonToScript_Click" Content="To Script" Width="100" Margin="3" HorizontalAlignment="Left" />
+        </DockPanel>
+        <avalonedit:TextEditor Name="_textEditor" Grid.Row="1"
+					    FontFamily="Consolas"
+					    ShowLineNumbers="True">
+        </avalonedit:TextEditor>
+    </Grid>
+</styles:TkWindow>

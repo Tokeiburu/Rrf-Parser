@@ -1,0 +1,21 @@
+﻿<styles:TkWindow x:Class="RrfParser.WPF.TranslationHelper"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
+        xmlns:styles="clr-namespace:TokeiLibrary.WPF.Styles;assembly=TokeiLibrary"
+        Title="Translation Helper" Height="500" Width="800">
+<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <avalonedit:TextEditor Name="_rtb1"
+					    FontFamily="Consolas"
+					    ShowLineNumbers="True">
+        </avalonedit:TextEditor>
+        <avalonedit:TextEditor Name="_rtb2" Grid.Column="1"
+					    FontFamily="Consolas"
+					    ShowLineNumbers="True">
+        </avalonedit:TextEditor>
+    </Grid>
+</styles:TkWindow>
