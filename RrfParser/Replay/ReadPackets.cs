@@ -29,7 +29,11 @@ namespace RrfParser.Replay {
 
 				List<Chunk> chunks = new List<Chunk>();
 
-				chunks.AddRange(mainContainers.First(p => p.ContainerType == ContainerType.InitialPackets).Data);
+				var initialPacket = mainContainers.FirstOrDefault(p => p.ContainerType == ContainerType.InitialPackets);
+
+				if (initialPacket != null)
+					chunks.AddRange(initialPacket.Data);
+
 				chunks.AddRange(mainContainers.First(p => p.ContainerType == ContainerType.PacketStream).Data);
 				chunks = chunks.Where(p => p.Length > 0).ToList();
 

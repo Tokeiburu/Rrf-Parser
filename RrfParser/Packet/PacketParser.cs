@@ -276,7 +276,7 @@ namespace RrfParser.Packet {
 				mobOutput.AppendLine("\tADelay (approximation): " + mobData.ADelay);
 				mobOutput.AppendLine("\tHP: " + mobData.HP);
 
-				if (Data.MobDrops.ContainsKey(mobData.View)) {
+				if (Data.MobDrops.ContainsKey(mobData.View) && Data.MobDead.ContainsKey(mobData.View)) {
 					int deaths = Data.MobDead[mobData.View];
 					Dictionary<int, double> rates = new Dictionary<int, double>();
 					Dictionary<int, double> rates2 = new Dictionary<int, double>();

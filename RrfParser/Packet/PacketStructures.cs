@@ -175,7 +175,7 @@ namespace RrfParser.Packet {
 		public struct PACKET_ZC_USE_SKILL_0x011a {
 			public Int16 PacketType;
 			public UInt16 SKID;
-			public Int32 level;
+			public UInt16 level;
 			public UInt32 targetAID;
 			public UInt32 srcAID;
 			public byte result;
